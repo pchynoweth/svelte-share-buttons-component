@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    text-align: center;
+    padding: 1em;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+.share-button-example {
+    display: inline-block;
+}
+
+#svelte-example-round .ssbc-button {
+    border-radius: 50%;
+}
+
+@media (min-width: 640px) {
+    main {
+        max-width: none;
+    }
+}

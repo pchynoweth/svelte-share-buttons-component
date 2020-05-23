@@ -1,0 +1,20 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "svelte-share-buttons-component": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.6"
+  }
+}
