@@ -1,8 +1,37 @@
-plugins:
-  - jekyll-relative-links
-relative_links:
-  enabled: true
-  collections: true
-include:
-  - index.html
-  - README.md
+### your site title here
+
+title: Boreal's slice of the Web
+
+permalink: /:title
+
+baseurl: ""
+
+sass: 
+  style: compressed
+
+### exclude the instructions / write-up in the README.md
+exclude:
+- README.md
+
+highlighter: rouge
+markdown: kramdown
+### exclude the instructions / write-up in the README.md
+
+
+# Tracker
+analytics: UA-133292887-1
+
+# Comments
+# disqus-shortname:
+
+#optimization
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4,link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title]
+  comments: ["<!-- ", " -->"]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
