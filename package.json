@@ -20,8 +20,8 @@
     "src",
     "dist"
   ],
-  "description": "Simple Svelte based social media share buttons with no tracking.",
-  "version": "1.0.2",
+  "description": "Simple Svelte based social media share buttons component with no tracking.",
+  "version": "1.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pchynoweth/svelte-share-buttons-component.git"
