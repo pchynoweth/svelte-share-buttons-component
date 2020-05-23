@@ -20,7 +20,7 @@
     "src",
     "dist"
   ],
-  "description": "*Psst — looking for an app template? Go here --> [sveltejs/template](https://github.com/sveltejs/template)*",
+  "description": "Simple Svelte based social media share buttons with no tracking.",
   "version": "1.0.2",
   "repository": {
     "type": "git",
