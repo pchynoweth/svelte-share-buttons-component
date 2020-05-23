@@ -8,47 +8,42 @@
 </script>
 
 <style>
-.link,
-.icon {
+.ssbc-button__link,
+.ssbc-button__icon {
   display: inline-block;
 }
 
-.link {
+.ssbc-button__link {
   text-decoration: none;
   color: #fff;
 }
 
-.button {
+.ssbc-button {
   transition: 25ms ease-out;
-  padding: 0.5em 0.75em;
+  padding: 0.75em;
 }
 
-:global(.icon svg) {
+.ssbc-button__icon :global(svg) {
   width: 1em;
   height: 1em;
-  margin-right: 0.4em;
-  vertical-align: top
-}
-
-:global(.button svg) {
   margin: 0;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
-.fill {
+.ssbc-button__icon--fill {
   fill: #fff;
   stroke: none;
 }
 
-.outline {
+.ssbc-button__icon--outline {
   fill: none;
   stroke: #fff;
 }
 </style>
 
-<a class="link" {href} target="_blank" rel="noopener" aria-label="">
-  <div class="button {classes}">
-    <div aria-hidden="true" class="icon" class:fill class:outline={!fill}>
+<a class="ssbc-button__link" {href} target="_blank" rel="noopener" aria-label="">
+  <div class="ssbc-button {classes}">
+    <div aria-hidden="true" class="ssbc-button__icon" class:ssbc-button__icon--fill={fill} class:ssbc-button__icon--outline={!fill}>
       <slot></slot>
     </div>
     {label}
