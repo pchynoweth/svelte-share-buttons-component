@@ -9,6 +9,8 @@ jobs:
   tag-version:
     name: tag-version
     runs-on: ubuntu-latest
+    outputs:
+      tagcreated: ${{ steps.apply-tag.outputs.tagcreated }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@master
@@ -20,7 +22,26 @@ jobs:
       uses: pchynoweth/action-get-npm-version@master
       id: package-version
     - name: Apply tag
+      id: apply-tag
       uses: pchynoweth/action-apply-tag@master
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         tag: v${{ steps.package-version.outputs.version }}
+  npm-publish:
+    name: npm-publish
+    needs: tag-version
+    runs-on: ubuntu-latest
+    if: ${{ needs.tag-version.outputs.tagcreated == 'yes' }}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@master
+    - name: Set up Node.js
+      uses: actions/setup-node@master
+      with:
+        node-version: 10.0.0
+    - name: Install npm deps
+      run: npm install
+    - name: Publish to npm
+      run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
