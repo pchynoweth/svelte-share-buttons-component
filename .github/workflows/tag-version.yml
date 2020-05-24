@@ -16,3 +16,9 @@ jobs:
         node-version: 12.0.0
     - name: Get the current version
       uses: pchynoweth/action-get-npm-version@master
+      id: package-version
+    - name: Apply tag
+      uses: pchynoweth/apply-tag-action@master
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        tag: v${{ steps.package-version.outputs.version }}
