@@ -11,6 +11,9 @@ Using npm:
 ```bash
 $ npm i --save svelte-share-buttons-component
 ```
+## Example
+
+https://svelte-share-buttons-component-demo.netlify.app/
 
 ## Usage
 
