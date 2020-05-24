@@ -1,4 +1,4 @@
-name: npm-publish
+name: tag-version
 on:
   push:
     branches:
