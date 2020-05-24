@@ -16,9 +16,10 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: 10.0.0
-    - run: npm install
+    - name: Install npm deps
+      run: npm install
     - name: Publish to npm
-    - run: npm publish
+      run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
   create-release:
