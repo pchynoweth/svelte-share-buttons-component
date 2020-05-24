@@ -42,8 +42,6 @@ jobs:
     - name: Install npm deps
       run: npm install
     - name: Publish to npm
-      run: |
-        npm config set //registry.npmjs.org/:_authToken=$(NODE_AUTH_TOKEN) 
-        npm publish
+      run: npm publish
       env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
