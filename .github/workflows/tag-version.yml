@@ -18,7 +18,7 @@ jobs:
       uses: pchynoweth/action-get-npm-version@master
       id: package-version
     - name: Apply tag
-      uses: pchynoweth/action-tag-apply@master
+      uses: pchynoweth/action-apply-tag@master
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         tag: v${{ steps.package-version.outputs.version }}
