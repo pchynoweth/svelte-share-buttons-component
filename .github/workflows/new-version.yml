@@ -1,4 +1,4 @@
-name: tag-version
+name: new-version
 on:
   push:
     branches:
