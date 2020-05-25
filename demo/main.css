@@ -13,6 +13,12 @@ main {
     margin: 0 auto;
 }
 
+#fork-on-github {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 h1 {
     text-align: center;
     font-size: 2.5em;
@@ -23,7 +29,15 @@ h1 {
     display: inline-block;
 }
 
+#pure-facebook-with-label .ssbc-button {
+    border-radius: 5px;
+}
+
 #svelte-example-round .ssbc-button {
+    border-radius: 15%;
+}
+
+#svelte-example-circle .ssbc-button {
     border-radius: 50%;
 }
 

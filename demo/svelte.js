@@ -7,3 +7,7 @@ new App({
 new App({
 	target: document.querySelector('#svelte-example-round')
 });
+
+new App({
+	target: document.querySelector('#svelte-example-circle')
+});

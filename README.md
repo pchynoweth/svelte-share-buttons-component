@@ -23,15 +23,23 @@ Basic usage from svelte looks like this:
 
 ```html
 <script>
-	import { Email, Reddit, LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
+	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter } from 'svelte-share-buttons-component';
 
-	const url = 'example.com';
-	const title = 'Demo page title';
+	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
+	const title = 'Svelte Share Buttons Component';
+	const desc = 'Svelte based social media share buttons component with no tracking.';
 </script>
 
-<Email subject="Demo email title" body="Demo email body" />
-<Reddit {title} {url} />
-<LinkedIn {title} {url} summary="This is a summary" />
-<Facebook {url} />
-<Twitter text="{title}" {url} />
+<Email subject="{title}" body="{desc} {url}" />
+<HackerNews class="share-button" {title} {url} />
+<Reddit class="share-button" {title} {url} />
+<LinkedIn class="share-button" {title} {url} summary="{desc}" source={url} />
+<Tumblr class="share-button" {title} {url} caption="{title}" />
+<Pinterest class="share-button" {url} description={title} />
+<Telegram class="share-button" text={title} {url} />
+<Vk class="share-button" {title} {url} />
+<WhatsApp class="share-button" text="{title} {url}" />
+<Xing class="share-button" {title} {url} />
+<Facebook class="share-button" {url} />
+<Twitter class="share-button" text="{title}" {url} />
 ```

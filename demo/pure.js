@@ -1,14 +1,14 @@
 import { Email, Reddit, LinkedIn, Facebook, Twitter } from 'svelte-share-buttons-component';
 
-const url = 'example.com';
-const title = 'Demo page title';
+const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
+const title = 'Svelte Share Buttons Component';
+const desc = 'Svelte based social media share buttons component with no tracking.';
 
 new Email ({
     target: document.querySelector('#pure-email'),
     props: {
-        id: 'email',
-        subject: 'Test email',
-        body: 'This is the email body'
+        subject: title,
+        body: `${desc} ${url}`
     },
 });
 
@@ -22,7 +22,7 @@ new Reddit ({
 new LinkedIn ({
     target: document.querySelector('#pure-linkedin'),
     props: {
-        title, url, summary: "This is a summary"
+        title, url, summary: desc, source: url
     },
 });
 
