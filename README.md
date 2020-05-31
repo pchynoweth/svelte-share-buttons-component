@@ -7,10 +7,22 @@ Simple Svelte based share buttons component with no tracking.  Based on HTML sha
 
 ## Installation
 
-Using npm:
+### Using npm
+
+#### Sapper or Other Svelte Bundler
+
+For Sapper you need to install the package as a dev module to so it gets compiled.  If you install it as a runtiome dependency you will 500 errors on the server side.  This is explained [here](https://github.com/sveltejs/sapper-template#using-external-components).
+
+```bash
+$ npm i -D svelte-share-buttons-component
+```
+
+### PureJS
+
 ```bash
 $ npm i --save svelte-share-buttons-component
 ```
+
 ## Example
 
 https://svelte-share-buttons-component-demo.netlify.app/
