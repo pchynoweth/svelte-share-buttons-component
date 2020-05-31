@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+* Modified installation instructions to include specific instructions for Sapper
+
 ## 1.1.1
 
 * Added prepare step to package.json.
