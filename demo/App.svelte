@@ -9,7 +9,7 @@
 <Email subject="{title}" body="{desc} {url}" />
 <HackerNews class="share-button" {title} {url} />
 <Reddit class="share-button" {title} {url} />
-<LinkedIn class="share-button" {title} {url} summary="{desc}" source={url} />
+<LinkedIn class="share-button" {url} />
 <Tumblr class="share-button" {title} {url} caption="{title}" />
 <Pinterest class="share-button" {url} description={title} />
 <Telegram class="share-button" text={title} {url} />

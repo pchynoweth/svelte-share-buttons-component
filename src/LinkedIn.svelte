@@ -1,16 +1,13 @@
 <script>
-  export let summary;
-  export let title;
   export let url;
-  export let source = url;
   let classes = '';
 
   export { classes as class };
 
   import ShareButton from './ShareButton.svelte';
   let href;
-  
-  $: href = encodeURI(`https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}&summary=${summary}&source=${source}`);
+
+  $: href = encodeURI(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
 </script>
 
 <style>

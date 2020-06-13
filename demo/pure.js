@@ -22,7 +22,7 @@ new Reddit ({
 new LinkedIn ({
     target: document.querySelector('#pure-linkedin'),
     props: {
-        title, url, summary: desc, source: url
+        url
     },
 });
 

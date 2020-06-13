@@ -1,5 +1,9 @@
 # Changelog
 
+### UNRELEASED
+
+* Updated LinkedIn button to remove deprecated parameters.  LinkedIn now gets the other information from meta tags.  Details can be found here: https://www.linkedin.com/help/linkedin/answer/46687/making-your-website-shareable-on-linkedin?lang=en.
+
 ## 1.1.2
 
 * Modified installation instructions to include specific instructions for Sapper
