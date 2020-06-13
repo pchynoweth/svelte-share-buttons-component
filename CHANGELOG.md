@@ -1,6 +1,6 @@
 # Changelog
 
-### UNRELEASED
+### 1.2.0
 
 * Updated LinkedIn button to remove deprecated parameters.  LinkedIn now gets the other information from meta tags.  Details can be found here: https://www.linkedin.com/help/linkedin/answer/46687/making-your-website-shareable-on-linkedin?lang=en.
 
