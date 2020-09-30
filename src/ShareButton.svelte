@@ -2,6 +2,7 @@
   export let href;
   export let label = '';
   export let fill = true;
+  export let ariaLabel = '';
   let classes = '';
 
   export { classes as class };
@@ -41,7 +42,7 @@
 }
 </style>
 
-<a class="ssbc-button__link" {href} target="_blank" rel="noopener">
+<a class="ssbc-button__link" {href} target="_blank" rel="noopener" aria-label={ariaLabel}>
   <div class="ssbc-button {classes}">
     <div aria-hidden="true" class="ssbc-button__icon" class:ssbc-button__icon--fill={fill} class:ssbc-button__icon--outline={!fill}>
       <slot></slot>
