@@ -13,11 +13,11 @@ jobs:
         uses: technote-space/create-pr-action@v2
         with:
           EXECUTE_COMMANDS: |
-            rm package-lock.json
+            rm -f package-lock.json
             npx npm-check-updates -u --packageFile package.json
             npm install
             cd demo
-            rm package-lock.json
+            rm -f package-lock.json
             npx npm-check-updates -u --packageFile package.json
             npm install
             cd ..
