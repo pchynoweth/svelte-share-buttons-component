@@ -2,7 +2,6 @@
   export let description;
   export let url;
   export let ariaLabel = 'Share on Pinterest';
-  export let media;
   let classes = '';
 
   export { classes as class };
@@ -10,7 +9,7 @@
   import ShareButton from './ShareButton.svelte';
   let href;
   
-  $: href = encodeURI(`https://pinterest.com/pin/create/button/?url=${url}&media=${media}&description=${description}`);
+  $: href = encodeURI(`https://pinterest.com/pin/create/button/?url=${url}&media=${url}&description=${description}`);
 </script>
 
 <style>
