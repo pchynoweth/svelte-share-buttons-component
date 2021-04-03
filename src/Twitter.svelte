@@ -2,14 +2,17 @@
   export let text;
   export let url;
   export let ariaLabel = 'Share on Twitter';
+  export let hashtags = '';
+  export let via = '';
+  export let related = '';
   let classes = '';
 
   export { classes as class };
 
   import ShareButton from './ShareButton.svelte';
   let href;
-  
-  $: href = encodeURI(`https://twitter.com/intent/tweet/?text=${text}&url=${url}`);
+
+  $: href = encodeURI(`https://twitter.com/intent/tweet/?text=${text}&hashtags=${hashtags}&via=${via}&related=${related}&url=${url}`);
 </script>
 
 <style>

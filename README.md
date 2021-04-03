@@ -54,5 +54,5 @@ Basic usage from svelte looks like this:
 <WhatsApp class="share-button" text="{title} {url}" />
 <Xing class="share-button" {title} {url} />
 <Facebook class="share-button" {url} />
-<Twitter class="share-button" text="{title}" {url} />
+<Twitter class="share-button" text="{title}" {url} hashtags="github,svelte" via="username" related="other,users" />
 ```

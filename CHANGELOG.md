@@ -1,5 +1,10 @@
 # Changelog
 
+# UNRELEASED
+
+* Updated depencencies
+* Added support for additional twitter parameters
+
 ## 1.2.1
 
 * Added aria-label attribute to internal anchor
