@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.3.0
+## UNRELEASED
 
 * Updated depencencies
 * Added support for additional twitter parameters

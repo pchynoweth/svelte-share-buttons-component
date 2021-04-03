@@ -48,7 +48,7 @@ Basic usage from svelte looks like this:
 <Reddit class="share-button" {title} {url} />
 <LinkedIn class="share-button" {url} />
 <Tumblr class="share-button" {title} {url} caption="{title}" />
-<Pinterest class="share-button" url="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" description={title} />
+<Pinterest class="share-button" {url} media="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/200px-Svelte_Logo.svg.png" description={title} />
 <Telegram class="share-button" text={title} {url} />
 <Vk class="share-button" {title} {url} />
 <WhatsApp class="share-button" text="{title} {url}" />
@@ -56,3 +56,7 @@ Basic usage from svelte looks like this:
 <Facebook class="share-button" {url} />
 <Twitter class="share-button" text="{title}" {url} hashtags="github,svelte" via="username" related="other,users" />
 ```
+
+### Notes
+
+* A media tag with a valid image url is required for pinterest.
