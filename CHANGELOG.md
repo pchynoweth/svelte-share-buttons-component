@@ -4,6 +4,7 @@
 
 * Updated depencencies
 * Added support for additional twitter parameters
+* **BREAKING** Added support for pinterest media param.  This is now a required parameter for pinterest.
 
 ## 1.2.1
 
