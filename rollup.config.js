@@ -15,8 +15,7 @@ export default {
 		{ file: pkg.main, 'format': 'umd', name }
 	],
 	plugins: [
-		svelte(),
-		resolve(),
-		css()
+		svelte({ emitCss: false }),
+		resolve()
 	]
 };
