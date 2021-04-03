@@ -16,6 +16,6 @@
     "@babel/polyfill": "^7.8.7",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.6",
-    "svelte": "^3.22.3"
+    "svelte": "^3.37.0"
   }
 }
