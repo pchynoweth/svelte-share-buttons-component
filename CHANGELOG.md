@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0
+
+* Fixed demo
+* Updated depencencies
+
 ## 1.3.2
 
 * Updated depencencies

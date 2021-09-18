@@ -1,5 +1,9 @@
 <script>
-	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter } from 'svelte-share-buttons-component';
+	// You need to import the src directory here because importing pre-compiled svelte components into svelte apps is not supported.
+	// See: https://github.com/sveltejs/svelte/issues/6584#issuecomment-907429921
+	// If you use rollup or webpack, you can get the bundler to do this for you.  We are using the src directory explicitly here
+	// because we are using parceljs and we want to use the pre-compiled commonjs code for the pure js example.
+	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter } from 'svelte-share-buttons-component/src';
 
 	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 	const title = 'Svelte Share Buttons Component';
