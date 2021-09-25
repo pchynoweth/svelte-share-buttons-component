@@ -10,10 +10,10 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^13.0.4",
-    "rollup": "^2.56.3",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "rollup": "^2.57.0",
     "rollup-plugin-svelte": "^7.1.0",
-    "svelte": "^3.42.6"
+    "svelte": "^3.43.0"
   },
   "keywords": [
     "svelte"
