@@ -13,17 +13,20 @@
 
 <style>
 :global(.ssbc-button--line) {
-  background-color: #0077b5;
+  background-color: #00B900;
 }
 
 :global(.ssbc-button--line:active),
 :global(.ssbc-button--line:hover) {
-  background-color: #046293;
+  background-color: #00B900;
 }
 </style>
 
 <ShareButton class="ssbc-button--line {classes}" {...$$restProps} {ariaLabel} {href}>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z"/>
-  </svg>
+	<svg xmlns="http://www.w3.org/2000/svg"
+	aria-label="LINE" role="img"
+	viewBox="0 0 512 512"><rect
+	width="512" height="512"
+	rx="15%"
+	fill="#00B900"/><path d="m443 231c-2 45-21 76-51 103-53 47-137 105-148 96-11-14 21-47-20-52-88-12-155-74-155-147 0-82 85-150 188-150s189 68 186 150z" fill="#fff"/><path d="m371 232h-34m34-36h-36v72h36m-123 0v-72l54 72v-72m-89 72v-72m-66 0v72h37" fill="none" stroke="#00B900" stroke-linecap="round" stroke-linejoin="round" stroke-width="21"/></svg>
 </ShareButton>
