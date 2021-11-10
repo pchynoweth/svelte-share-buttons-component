@@ -1,4 +1,5 @@
 <script>
+  export let quote;
   export let url;
   export let ariaLabel = 'Share on Facebook';
   let classes = '';
@@ -8,7 +9,7 @@
   import ShareButton from './ShareButton.svelte';
   let href;
   
-  $: href = encodeURI(`https://facebook.com/sharer/sharer.php?u=${url}`);
+  $: href = encodeURI(`https://facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`);
 </script>
 
 <style>
