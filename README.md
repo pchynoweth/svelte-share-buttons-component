@@ -53,7 +53,7 @@ Basic usage from svelte looks like this:
 <Vk class="share-button" {title} {url} />
 <WhatsApp class="share-button" text="{title} {url}" />
 <Xing class="share-button" {title} {url} />
-<Facebook class="share-button" {url} />
+<Facebook class="share-button" quote="{title}" {url} />
 <Twitter class="share-button" text="{title}" {url} hashtags="github,svelte" via="username" related="other,users" />
 ```
 
