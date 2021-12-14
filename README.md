@@ -36,7 +36,7 @@ Basic usage from svelte looks like this:
 
 ```html
 <script>
-	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter } from 'svelte-share-buttons-component';
+	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter, Line } from 'svelte-share-buttons-component';
 
 	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 	const title = 'Svelte Share Buttons Component';
@@ -55,6 +55,7 @@ Basic usage from svelte looks like this:
 <Xing class="share-button" {title} {url} />
 <Facebook class="share-button" quote="{title}" {url} />
 <Twitter class="share-button" text="{title}" {url} hashtags="github,svelte" via="username" related="other,users" />
+<Line class="share-button" {url} />
 ```
 
 ### Notes
