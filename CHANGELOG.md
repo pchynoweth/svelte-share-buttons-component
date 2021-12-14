@@ -1,6 +1,6 @@
 # Changelog
 
-# Unreleased
+# 1.5.0
 
 * Added Line button
 * Added "quote" attribute to Facebook button
