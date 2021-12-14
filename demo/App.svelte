@@ -3,7 +3,7 @@
 	// See: https://github.com/sveltejs/svelte/issues/6584#issuecomment-907429921
 	// If you use rollup or webpack, you can get the bundler to do this for you.  We are using the src directory explicitly here
 	// because we are using parceljs and we want to use the pre-compiled commonjs code for the pure js example.
-	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter } from 'svelte-share-buttons-component/src';
+	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter, Line } from 'svelte-share-buttons-component/src';
 
 	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 	const title = 'Svelte Share Buttons Component';
@@ -20,5 +20,6 @@
 <Vk class="share-button" {title} {url} />
 <WhatsApp class="share-button" text="{title} {url}" />
 <Xing class="share-button" {title} {url} />
-<Facebook class="share-button" {url} />
+<Facebook class="share-button" {url} quote="{title}" />
 <Twitter class="share-button" text="{title}" {url} />
+<Line class="share-button" {url} />

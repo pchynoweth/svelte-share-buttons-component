@@ -1,5 +1,11 @@
 # Changelog
 
+# Unreleased
+
+* Added Line button
+* Added "quote" attribute to Facebook button
+* Updated dependencies
+
 ## 1.4.0
 
 * Fixed demo

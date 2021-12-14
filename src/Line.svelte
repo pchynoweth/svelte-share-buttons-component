@@ -23,7 +23,7 @@
 </style>
 
 <ShareButton class="ssbc-button--line {classes}" {...$$restProps} {ariaLabel} {href}>
-	<svg xmlns="http://www.w3.org/2000/svg" aria-label="LINE" role="img" viewBox="0 0 512 512">
-		<rect width="512" height="512" rx="15%" fill="#00B900"/><path d="m443 231c-2 45-21 76-51 103-53 47-137 105-148 96-11-14 21-47-20-52-88-12-155-74-155-147 0-82 85-150 188-150s189 68 186 150z" fill="#fff"/><path d="m371 232h-34m34-36h-36v72h36m-123 0v-72l54 72v-72m-89 72v-72m-66 0v72h37" fill="none" stroke="#00B900" stroke-linecap="round" stroke-linejoin="round" stroke-width="21"/>
-	</svg>
+  <svg aria-label="LINE" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+    <path d="M512.017 227.437c-2.734 61.513-28.706 103.889-69.715 140.796-72.448 64.247-187.272 143.53-202.308 131.227-15.037-19.137 28.706-64.246-27.34-71.08C92.365 411.975.778 327.224.778 227.436c0-112.09 116.191-205.042 256.987-205.042 140.796 0 258.354 92.953 254.253 205.042z" fill="#fff" style="stroke-width:1.36695" transform="translate(0 -5.565)"/><path d="M413.596 223.24H367.12m46.476-49.21h-49.21v98.42h49.21m-168.135 0v-98.42l73.816 98.42v-98.42m-121.659 98.42v-98.42m-90.218 0v98.42h50.577" fill="none" stroke="#00b900" stroke-linecap="round" stroke-linejoin="round" stroke-width="24.25"/>
+  </svg>
 </ShareButton>

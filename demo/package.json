@@ -12,10 +12,7 @@
   "devDependencies": {
     "@babel/polyfill": "^7.8.7",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-svelte": "^4.0.8",
-    "svelte": "^3.37.0"
-  },
-  "dependencies": {
-    "svelte-share-buttons-component": "git+https://git@github.com/pchynoweth/svelte-share-buttons-component.git"
+    "parcel-plugin-svelte": "^4.0.9",
+    "svelte": "^3.44.3"
   }
 }
