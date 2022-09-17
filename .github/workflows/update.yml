@@ -25,4 +25,4 @@ jobs:
           COMMIT_NAME: 'GitHub Actions'
           PR_BRANCH_NAME: 'chore-npm-update-${PR_ID}'
           PR_TITLE: 'chore: update npm dependencies'
-          AUTO_MERGE_THRESHOLD_DAYS: 5
+          AUTO_MERGE_THRESHOLD_DAYS: 1
