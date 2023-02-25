@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.5.2
+
+* Changed node version for build
+
 # 1.5.1
 
 * Added Viper button
