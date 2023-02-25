@@ -1,5 +1,10 @@
 # Changelog
 
+# 1.5.1
+
+* Added Viper button
+* Updated dependencies
+
 # 1.5.0
 
 * Added Line button
