@@ -39,6 +39,8 @@ jobs:
       uses: actions/setup-node@master
       with:
         node-version: 16.0.0
+    - name: Upgrade npm to latest version
+      run: npm install -g npm
     - name: Install npm deps
       run: npm install
     - name: Publish to npm
