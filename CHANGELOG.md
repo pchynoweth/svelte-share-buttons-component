@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.5.4
+
+* Build now uses latest node
+
 # 1.5.3
 
 * Added step to build to update npm
