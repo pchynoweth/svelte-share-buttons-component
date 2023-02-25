@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.5.3
+
+* Added step to build to update npm
+
 # 1.5.2
 
 * Changed node version for build
