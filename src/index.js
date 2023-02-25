@@ -11,3 +11,4 @@ export { default as Vk } from './Vk.svelte';
 export { default as WhatsApp } from './WhatsApp.svelte';
 export { default as Xing } from './Xing.svelte';
 export { default as Line } from './Line.svelte';
+export { default as Viber } from './Viber.svelte';
