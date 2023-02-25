@@ -23,3 +23,4 @@
 <Facebook class="share-button" {url} quote="{title}" />
 <Twitter class="share-button" text="{title}" {url} />
 <Line class="share-button" {url} />
+<Viber class="share-button" href="{url}" />
