@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.5.5
+
+* Added rel="noreferrer" to button
+
 # 1.5.4
 
 * Build now uses latest node
