@@ -1,4 +1,4 @@
-import { Email, Reddit, LinkedIn, Facebook, Twitter, Line } from 'svelte-share-buttons-component';
+import { Email, Reddit, LinkedIn, Facebook, X, Line } from 'svelte-share-buttons-component';
 
 const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 const title = 'Svelte Share Buttons Component';
@@ -33,8 +33,8 @@ new Facebook ({
     },
 });
 
-new Twitter ({
-    target: document.querySelector('#pure-twitter'),
+new X ({
+    target: document.querySelector('#pure-x'),
     props: {
         text: title, url
     },
