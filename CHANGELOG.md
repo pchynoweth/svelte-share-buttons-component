@@ -1,5 +1,10 @@
 # Changelog
 
+# UNRELEASED
+
+* Updated dependencies
+* Converted Twitter to X
+
 # 1.5.5
 
 * Added rel="noreferrer" to button

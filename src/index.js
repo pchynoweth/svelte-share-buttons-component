@@ -6,7 +6,7 @@ export { default as Pinterest } from './Pinterest.svelte';
 export { default as Reddit } from './Reddit.svelte';
 export { default as Telegram } from './Telegram.svelte';
 export { default as Tumblr } from './Tumblr.svelte';
-export { default as Twitter } from './Twitter.svelte';
+export { default as X } from './X.svelte';
 export { default as Vk } from './Vk.svelte';
 export { default as WhatsApp } from './WhatsApp.svelte';
 export { default as Xing } from './Xing.svelte';
