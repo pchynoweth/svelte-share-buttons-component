@@ -43,7 +43,7 @@ jobs:
       - run: npm run build
       - run: touch dist/.nojekyll
       - run: ls
-      - run: ls dist
+      - run: ls -la dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
