@@ -8,8 +8,10 @@
   "exports": {
     ".": {
       "svelte": "./src/index.js",
-      "module": "./src/index.js",
-      "require": "./dist/index.js"
+      "default": "./dist/index.js"
+    },
+    "./src": {
+      "default": "./src/index.js"
     }
   },
   "scripts": {
