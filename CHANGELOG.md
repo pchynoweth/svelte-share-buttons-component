@@ -1,5 +1,10 @@
 # Changelog
 
+# 3.0.0
+
+* Added exports to package.json
+* Updated dependencies
+
 # 2.0.0
 
 * Updated dependencies
