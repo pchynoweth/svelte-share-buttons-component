@@ -4,6 +4,7 @@ export { default as HackerNews } from './HackerNews.svelte';
 export { default as LinkedIn } from './LinkedIn.svelte';
 export { default as Pinterest } from './Pinterest.svelte';
 export { default as Reddit } from './Reddit.svelte';
+export { default as ShareButton } from './ShareButton.svelte';
 export { default as Telegram } from './Telegram.svelte';
 export { default as Tumblr } from './Tumblr.svelte';
 export { default as X } from './X.svelte';
