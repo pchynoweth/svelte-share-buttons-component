@@ -21,9 +21,9 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^16.0.1",
-    "rollup": "^4.50.1",
+    "rollup": "^4.52.0",
     "rollup-plugin-svelte": "^7.2.3",
-    "svelte": "^5.38.10"
+    "svelte": "^5.39.3"
   },
   "keywords": [
     "svelte"
