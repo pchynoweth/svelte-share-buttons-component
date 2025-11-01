@@ -23,7 +23,7 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "rollup": "^4.52.5",
     "rollup-plugin-svelte": "^7.2.3",
-    "svelte": "^5.41.4"
+    "svelte": "^5.43.2"
   },
   "keywords": [
     "svelte"
