@@ -1,12 +1,15 @@
 name: new-version
+permissions:
+  contents: read
 on:
-  push:
     branches:
       - master
     paths:
       - 'package.json'
 jobs:
   tag-version:
+    permissions:
+      contents: write
     name: tag-version
     runs-on: ubuntu-latest
     outputs:
