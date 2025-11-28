@@ -8,6 +8,9 @@ jobs:
   release:
     name: Update npm packages
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Update npm packages
         uses: technote-space/create-pr-action@v2
