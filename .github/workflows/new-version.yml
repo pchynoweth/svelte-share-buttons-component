@@ -1,6 +1,6 @@
 name: new-version
 permissions:
-  contents: read
+  contents: write
 on:
     branches:
       - master
