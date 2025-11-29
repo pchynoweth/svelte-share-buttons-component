@@ -16,14 +16,21 @@
   },
   "scripts": {
     "build": "rollup -c",
+    "dev": "vite",
+    "preview": "vite build && vite preview",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
     "prepublishOnly": "npm run build",
     "prepare": "npm run build"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
     "rollup": "^4.53.3",
     "rollup-plugin-svelte": "^7.2.3",
-    "svelte": "^5.45.2"
+    "svelte": "^5.45.2",
+    "vite": "^7.2.4"
   },
   "keywords": [
     "svelte"
