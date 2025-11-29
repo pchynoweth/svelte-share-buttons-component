@@ -2,6 +2,7 @@ name: new-version
 permissions:
   contents: write
 on:
+  push:
     branches:
       - master
     paths:
