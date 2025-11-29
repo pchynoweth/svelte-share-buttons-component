@@ -5,12 +5,15 @@
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "types": "src/index.d.ts",
   "exports": {
     ".": {
+      "types": "./src/index.d.ts",
       "svelte": "./src/index.js",
       "default": "./dist/index.js"
     },
     "./src": {
+      "types": "./src/index.d.ts",
       "default": "./src/index.js"
     }
   },
