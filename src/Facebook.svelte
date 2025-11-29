@@ -9,7 +9,7 @@
   import ShareButton from './ShareButton.svelte';
   let href;
   
-  $: href = encodeURI(`https://facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`);
+  $: href = encodeURI(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`);
 </script>
 
 <style>

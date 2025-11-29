@@ -8,7 +8,7 @@
   import ShareButton from './ShareButton.svelte';
   let href;
 
-  $: href = encodeURI(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`);
+  $: href = encodeURI(`https://www.linkedin.com/shareArticle?mini=true&url=${url}`);
 </script>
 
 <style>
