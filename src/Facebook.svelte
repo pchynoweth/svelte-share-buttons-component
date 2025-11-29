@@ -1,15 +1,9 @@
 <script>
-  export let quote;
-  export let url;
-  export let ariaLabel = 'Share on Facebook';
-  let classes = '';
-
-  export { classes as class };
-
   import ShareButton from './ShareButton.svelte';
-  let href;
+
+  let { quote, url, ariaLabel = 'Share on Facebook', class: classes = '', ...restProps } = $props();
   
-  $: href = encodeURI(`https://facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`);
+  let href = $derived(encodeURI(`https://facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`));
 </script>
 
 <style>
@@ -23,7 +17,7 @@
 }
 </style>
 
-<ShareButton class="ssbc-button--facebook {classes}" {...$$restProps} {ariaLabel} {href}>
+<ShareButton class="ssbc-button--facebook {classes}" {...restProps} {ariaLabel} {href}>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/>
   </svg>
