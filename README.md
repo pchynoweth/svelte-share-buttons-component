@@ -11,7 +11,7 @@ Simple Svelte based share buttons component with no tracking.  Based on HTML sha
 
 #### Sapper or Other Svelte Bundler
 
-For Sapper you need to install the package as a dev module to so it gets compiled.  If you install it as a runtiome dependency you will 500 errors on the server side.  This is explained [here](https://github.com/sveltejs/sapper-template#using-external-components).
+For Sapper you need to install the package as a dev module to so it gets compiled.  If you install it as a runtime dependency you will 500 errors on the server side.  This is explained [here](https://github.com/sveltejs/sapper-template#using-external-components).
 
 ```bash
 $ npm i -D svelte-share-buttons-component
