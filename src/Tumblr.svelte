@@ -1,7 +1,16 @@
-<script>
+<script lang="ts">
   import ShareButton from './ShareButton.svelte';
+  import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-  let { title, caption, url, ariaLabel = 'Share on Tumblr', class: classes = '', ...restProps } = $props();
+  interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
+    title: string;
+    caption: string;
+    url: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+
+  let { title, caption, url, ariaLabel = 'Share on Tumblr', class: classes = '', ...restProps }: Props = $props();
   
   let href = $derived(encodeURI(`https://www.tumblr.com/widgets/share/tool?posttype=link&title=${title}&caption=${caption}&content=${url}&canonicalUrl=${url}&shareSource=tumblr_share_button`));
 </script>

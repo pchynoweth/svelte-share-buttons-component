@@ -1,7 +1,15 @@
-<script>
+<script lang="ts">
   import ShareButton from './ShareButton.svelte';
+  import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-  let { subject, body, ariaLabel = 'Share by Email', class: classes = '', ...restProps } = $props();
+  interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
+    subject: string;
+    body: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+
+  let { subject, body, ariaLabel = 'Share by Email', class: classes = '', ...restProps }: Props = $props();
   
   let href = $derived(encodeURI(`mailto:?subject=${subject}&body=${body}`));
 </script>

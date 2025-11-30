@@ -1,7 +1,14 @@
-<script>
+<script lang="ts">
   import ShareButton from './ShareButton.svelte';
+  import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-  let { url, ariaLabel = 'Share on Line', class: classes = '', ...restProps } = $props();
+  interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
+    url: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+
+  let { url, ariaLabel = 'Share on Line', class: classes = '', ...restProps }: Props = $props();
 
   let href = $derived(encodeURI(`https://social-plugins.line.me/lineit/share?url=${url}`));
 </script>

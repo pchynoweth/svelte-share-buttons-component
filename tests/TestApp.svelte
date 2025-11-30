@@ -1,5 +1,5 @@
 <script>
-  import { Email, Facebook, HackerNews, Line, LinkedIn, Pinterest, Reddit, Telegram, Tumblr, Viber, Vk, WhatsApp, X, Xing } from '../src/index.js';
+  import { Email, Facebook, HackerNews, Line, LinkedIn, Pinterest, Reddit, Telegram, Tumblr, Viber, Vk, WhatsApp, X, Xing } from '../src/index.ts';
 
   const url = 'https://example.com/share-test';
   const title = 'Test Share Title';

@@ -1,7 +1,14 @@
-<script>
+<script lang="ts">
   import ShareButton from './ShareButton.svelte';
+  import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-  let { text, ariaLabel = 'Share on Viber', class: classes = '', ...restProps } = $props();
+  interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
+    text: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+
+  let { text, ariaLabel = 'Share on Viber', class: classes = '', ...restProps }: Props = $props();
   
   let href = $derived(encodeURI(`viber://forward?text=${text}`));
 </script>
