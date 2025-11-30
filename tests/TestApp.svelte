@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
   import { Email, Facebook, HackerNews, Line, LinkedIn, Pinterest, Reddit, Telegram, Tumblr, Viber, Vk, WhatsApp, X, Xing } from '../src/index.ts';
 
-  const url = 'https://example.com/share-test';
-  const title = 'Test Share Title';
-  const desc = 'Test share description for testing purposes.';
+  const url: string = 'https://example.com/share-test';
+  const title: string = 'Test Share Title';
+  const desc: string = 'Test share description for testing purposes.';
 </script>
 
 <div id="test-container">
