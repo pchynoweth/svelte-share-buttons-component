@@ -11,7 +11,7 @@
 
   let { title, url, ariaLabel = 'Share on VK', class: classes = '', ...restProps }: Props = $props();
   
-  let href = $derived(encodeURI(`http://vk.com/share.php?title=${title}&url=${url}`));
+  let href = $derived(encodeURI(`https://vk.com/share.php?title=${title}&url=${url}`));
 </script>
 
 <style>
