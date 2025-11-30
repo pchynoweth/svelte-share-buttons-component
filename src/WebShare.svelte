@@ -47,6 +47,9 @@
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  background: none;
+  padding: 0;
+  color: inherit;
 }
 
 .ssbc-button {
