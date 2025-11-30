@@ -1,5 +1,15 @@
 # Changelog
 
+# 4.0.0
+
+* Ported the project to Svelte 5
+* Added Bluesky share button
+* Exposed ShareButton base component to allow users to implement their own share buttons
+* Changed demo app to use vite because no parcel transformer is currently available for Svelte 5
+* Changed vk link to use https
+* Normalised Facebook, Pinterest and Telegram to use www
+* Added web fallback for WhatsApp link 
+
 # 3.0.0
 
 * Added exports to package.json
