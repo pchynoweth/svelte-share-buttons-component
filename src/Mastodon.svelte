@@ -12,7 +12,7 @@
 
   let { text, url, instance = 'mastodon.social', ariaLabel = 'Share on Mastodon', class: classes = '', ...restProps }: Props = $props();
 
-  let href = $derived(`https://${encodeURIComponent(instance)}/share?text=${encodeURIComponent(text + ' ' + url)}`);
+  let href = $derived(encodeURI(`https://${instance}/share?text=${text} ${url}`));
 </script>
 
 <style>
