@@ -35,7 +35,7 @@ Basic usage from svelte looks like this:
 
 ```html
 <script>
-	import { Bluesky, Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WebShare, WhatsApp, Xing, Facebook, X, Line } from 'svelte-share-buttons-component';
+	import { Bluesky, Email, HackerNews, Mastodon, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WebShare, WhatsApp, Xing, Facebook, X, Line } from 'svelte-share-buttons-component';
 
 	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 	const title = 'Svelte Share Buttons Component';
@@ -45,6 +45,7 @@ Basic usage from svelte looks like this:
 <Bluesky class="share-button" text="{title}" {url} />
 <Email subject="{title}" body="{desc} {url}" />
 <HackerNews class="share-button" {title} {url} />
+<Mastodon class="share-button" text="{title}" {url} instance="mastodon.social" />
 <Reddit class="share-button" {title} {url} />
 <LinkedIn class="share-button" {url} />
 <Tumblr class="share-button" {title} {url} caption="{title}" />
@@ -62,4 +63,5 @@ Basic usage from svelte looks like this:
 ### Notes
 
 * A media tag with a valid image url is required for pinterest.
+* The Mastodon component requires an `instance` prop to specify the user's Mastodon instance domain (defaults to "mastodon.social"). Since Mastodon is decentralized, users have accounts on different instances.
 * The WebShare component uses the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API), which allows sharing content to any app that supports receiving shared data. It only works in secure contexts (HTTPS) and on supported browsers. The button will be disabled if the Web Share API is not available.
