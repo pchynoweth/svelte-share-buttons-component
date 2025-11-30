@@ -8,7 +8,8 @@
 * Changed demo app to use vite because no parcel transformer is currently available for Svelte 5
 * Changed vk link to use https
 * Normalised Facebook, Pinterest and Telegram to use www
-* Added web fallback for WhatsApp link 
+* Added web fallback for WhatsApp link
+* Added web share API button
 
 # 3.0.0
 
