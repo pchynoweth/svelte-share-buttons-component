@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const ALL_BUTTON_TEST_IDS = [
-  'email', 'facebook', 'hackernews', 'line', 'linkedin',
+  'bluesky', 'email', 'facebook', 'hackernews', 'line', 'linkedin',
   'pinterest', 'reddit', 'telegram', 'tumblr', 'viber',
   'vk', 'whatsapp', 'x', 'xing'
 ];
@@ -9,6 +9,15 @@ const ALL_BUTTON_TEST_IDS = [
 test.describe('Share Button Components', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/');
+  });
+
+  test('Bluesky button renders with correct href', async ({ page }) => {
+    const container = page.locator('[data-testid="bluesky"]');
+    const link = container.locator('a.ssbc-button__link');
+    
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', /bsky\.app\/intent\/compose/);
+    await expect(link).toHaveAttribute('aria-label', 'Share on Bluesky');
   });
 
   test('Email button renders with correct href', async ({ page }) => {

@@ -35,13 +35,14 @@ Basic usage from svelte looks like this:
 
 ```html
 <script>
-	import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, X, Line } from 'svelte-share-buttons-component';
+	import { Bluesky, Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, X, Line } from 'svelte-share-buttons-component';
 
 	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 	const title = 'Svelte Share Buttons Component';
 	const desc = 'Svelte based social media share buttons component with no tracking.';
 </script>
 
+<Bluesky class="share-button" text="{title}" {url} />
 <Email subject="{title}" body="{desc} {url}" />
 <HackerNews class="share-button" {title} {url} />
 <Reddit class="share-button" {title} {url} />
