@@ -62,4 +62,4 @@ Basic usage from svelte looks like this:
 ### Notes
 
 * A media tag with a valid image url is required for pinterest.
-* The WebShare component uses the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API), which allows sharing content to any app that supports receiving shared data. It only works in secure contexts (HTTPS) and on supported browsers.
+* The WebShare component uses the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API), which allows sharing content to any app that supports receiving shared data. It only works in secure contexts (HTTPS) and on supported browsers. The button will be disabled if the Web Share API is not available.

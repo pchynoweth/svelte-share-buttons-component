@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { HTMLButtonAttributes } from 'svelte/elements';
 
-  interface Props extends Omit<HTMLButtonAttributes, 'class' | 'type' | 'aria-label'> {
+  interface Props extends Omit<HTMLButtonAttributes, 'class' | 'type' | 'aria-label' | 'disabled'> {
     title?: string;
     text?: string;
     url?: string;
@@ -13,8 +13,14 @@
 
   let { title = '', text = '', url = '', label = '', fill = true, ariaLabel = 'Share', class: classes = '', ...restProps }: Props = $props();
 
+  let isSupported = $state(false);
+
+  $effect(() => {
+    isSupported = typeof navigator !== 'undefined' && typeof navigator.share === 'function';
+  });
+
   function handleClick() {
-    if (typeof navigator !== 'undefined' && navigator.share) {
+    if (isSupported) {
       const shareData: ShareData = {};
       if (title) shareData.title = title;
       if (text) shareData.text = text;
@@ -70,9 +76,14 @@
 :global(.ssbc-button--webshare:hover) {
   background-color: #4b5563;
 }
+
+.ssbc-button__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 </style>
 
-<button type="button" class="ssbc-button__button" aria-label={ariaLabel} onclick={handleClick} {...restProps}>
+<button type="button" class="ssbc-button__button" aria-label={ariaLabel} disabled={!isSupported} onclick={handleClick} {...restProps}>
   <div class="ssbc-button {classes} ssbc-button--webshare">
     <div aria-hidden="true" class="ssbc-button__icon" class:ssbc-button__icon--fill={fill} class:ssbc-button__icon--outline={!fill}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
