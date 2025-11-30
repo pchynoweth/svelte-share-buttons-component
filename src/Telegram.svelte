@@ -11,7 +11,7 @@
 
   let { text, url, ariaLabel = 'Share on Telegram', class: classes = '', ...restProps }: Props = $props();
   
-  let href = $derived(encodeURI(`https://telegram.me/share/url?text=${text}&url=${url}`));
+  let href = $derived(encodeURI(`https://www.telegram.me/share/url?text=${text}&url=${url}`));
 </script>
 
 <style>

@@ -11,7 +11,7 @@
 
   let { quote, url, ariaLabel = 'Share on Facebook', class: classes = '', ...restProps }: Props = $props();
   
-  let href = $derived(encodeURI(`https://facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`));
+  let href = $derived(encodeURI(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`));
 </script>
 
 <style>

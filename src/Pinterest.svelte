@@ -12,7 +12,7 @@
 
   let { description, url, media, ariaLabel = 'Share on Pinterest', class: classes = '', ...restProps }: Props = $props();
   
-  let href = $derived(encodeURI(`https://pinterest.com/pin/create/button/?url=${url}&media=${media}&description=${description}`));
+  let href = $derived(encodeURI(`https://www.pinterest.com/pin/create/button/?url=${url}&media=${media}&description=${description}`));
 </script>
 
 <style>
