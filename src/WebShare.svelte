@@ -26,8 +26,11 @@
       if (text) shareData.text = text;
       if (url) shareData.url = url;
       
-      navigator.share(shareData).catch(() => {
-        // User cancelled or share failed - silently handle
+      navigator.share(shareData).catch((error: Error) => {
+        // Silently ignore user cancellation (AbortError)
+        if (error.name !== 'AbortError') {
+          console.error('Web Share failed:', error);
+        }
       });
     }
   }
