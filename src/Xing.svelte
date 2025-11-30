@@ -1,15 +1,9 @@
 <script>
-  export let title;
-  export let url;
-  export let ariaLabel = 'Share on Xing';
-  let classes = '';
-
-  export { classes as class };
-
   import ShareButton from './ShareButton.svelte';
-  let href;
+
+  let { title, url, ariaLabel = 'Share on Xing', class: classes = '', ...restProps } = $props();
   
-  $: href = encodeURI(`https://www.xing.com/app/user?op=share;url=${url};title=${title}`);
+  let href = $derived(encodeURI(`https://www.xing.com/app/user?op=share;url=${url};title=${title}`));
 </script>
 
 <style>
@@ -23,7 +17,7 @@
 }
 </style>
 
-<ShareButton class="ssbc-button--xing {classes}" {...$$restProps} {ariaLabel} {href}>
+<ShareButton class="ssbc-button--xing {classes}" {...restProps} {ariaLabel} {href}>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M10.2 9.7l-3-5.4C7.2 4 7 4 6.8 4h-5c-.3 0-.4 0-.5.2v.5L4 10 .4 16v.5c0 .2.2.3.4.3h5c.3 0 .4 0 .5-.2l4-6.6v-.5zM24 .2l-.5-.2H18s-.2 0-.3.3l-8 14v.4l5.2 9c0 .2 0 .3.3.3h5.4s.3 0 .4-.2c.2-.2.2-.4 0-.5l-5-8.8L24 .7V.2z"/>
   </svg>

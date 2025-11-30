@@ -1,11 +1,5 @@
 <script>
-  export let href;
-  export let label = '';
-  export let fill = true;
-  export let ariaLabel = '';
-  let classes = '';
-
-  export { classes as class };
+  let { href, label = '', fill = true, ariaLabel = '', class: classes = '', children, ...restProps } = $props();
 </script>
 
 <style>
@@ -42,10 +36,10 @@
 }
 </style>
 
-<a class="ssbc-button__link" {href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel}>
+<a class="ssbc-button__link" {href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel} {...restProps}>
   <div class="ssbc-button {classes}">
     <div aria-hidden="true" class="ssbc-button__icon" class:ssbc-button__icon--fill={fill} class:ssbc-button__icon--outline={!fill}>
-      <slot></slot>
+      {@render children()}
     </div>
     {label}
   </div>
