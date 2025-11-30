@@ -21,7 +21,7 @@
 
 :global(.ssbc-button--bluesky:active),
 :global(.ssbc-button--bluesky:hover) {
-  background-color: #0a66c2;
+  background-color: #0a6edb;
 }
 </style>
 
