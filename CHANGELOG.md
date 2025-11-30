@@ -11,6 +11,7 @@
 * Normalised Facebook, Pinterest and Telegram to use www
 * Added web fallback for WhatsApp link
 * Added web share API button
+* Added Mastodon button
 
 # 3.0.0
 
