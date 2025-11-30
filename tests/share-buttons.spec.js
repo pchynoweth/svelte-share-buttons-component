@@ -127,7 +127,8 @@ test.describe('Share Button Components', () => {
     const link = container.locator('a.ssbc-button__link');
     
     await expect(link).toBeVisible();
-    await expect(link).toHaveAttribute('href', /whatsapp:\/\/send/);
+    // Desktop browsers use the web API, mobile browsers use the deep link protocol
+    await expect(link).toHaveAttribute('href', /api\.whatsapp\.com\/send/);
     await expect(link).toHaveAttribute('aria-label', 'Share on WhatsApp');
   });
 
