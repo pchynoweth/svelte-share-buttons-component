@@ -10,7 +10,8 @@
 
   let { text, ariaLabel = 'Share on WhatsApp', class: classes = '', ...restProps }: Props = $props();
   
-  let href = $derived(encodeURI(`whatsapp://send?text=${text}`));
+  // Use native WhatsApp deep link on mobile, otherwise fall back to the web API link
+  let href = $derived(encodeURI((typeof navigator !== 'undefined' && /Android|iPhone|iPad|iPod|IEMobile|Opera Mini/i.test(navigator.userAgent)) ? `whatsapp://send?text=${text}` : `https://api.whatsapp.com/send?text=${text}`));
 </script>
 
 <style>
