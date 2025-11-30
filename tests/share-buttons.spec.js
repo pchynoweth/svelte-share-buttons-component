@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const ALL_BUTTON_TEST_IDS = [
-  'bluesky', 'email', 'facebook', 'hackernews', 'line', 'linkedin',
+  'bluesky', 'email', 'facebook', 'hackernews', 'line', 'linkedin', 'mastodon',
   'pinterest', 'reddit', 'telegram', 'tumblr', 'viber',
   'vk', 'whatsapp', 'x', 'xing'
 ];
@@ -66,6 +66,15 @@ test.describe('Share Button Components', () => {
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute('href', /linkedin\.com\/sharing\/share-offsite/);
     await expect(link).toHaveAttribute('aria-label', 'Share on LinkedIn');
+  });
+
+  test('Mastodon button renders with correct href', async ({ page }) => {
+    const container = page.locator('[data-testid="mastodon"]');
+    const link = container.locator('a.ssbc-button__link');
+    
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', /mastodon\.social\/share\?text=/);
+    await expect(link).toHaveAttribute('aria-label', 'Share on Mastodon');
   });
 
   test('Pinterest button renders with correct href', async ({ page }) => {
