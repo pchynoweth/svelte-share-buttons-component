@@ -35,7 +35,7 @@ Basic usage from svelte looks like this:
 
 ```html
 <script>
-	import { Bluesky, Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, X, Line } from 'svelte-share-buttons-component';
+	import { Bluesky, Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WebShare, WhatsApp, Xing, Facebook, X, Line } from 'svelte-share-buttons-component';
 
 	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 	const title = 'Svelte Share Buttons Component';
@@ -51,6 +51,7 @@ Basic usage from svelte looks like this:
 <Pinterest class="share-button" {url} media="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/200px-Svelte_Logo.svg.png" description={title} />
 <Telegram class="share-button" text={title} {url} />
 <Vk class="share-button" {title} {url} />
+<WebShare class="share-button" {title} text={desc} {url} />
 <WhatsApp class="share-button" text="{title} {url}" />
 <Xing class="share-button" {title} {url} />
 <Facebook class="share-button" quote="{title}" {url} />
@@ -61,3 +62,4 @@ Basic usage from svelte looks like this:
 ### Notes
 
 * A media tag with a valid image url is required for pinterest.
+* The WebShare component uses the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API), which allows sharing content to any app that supports receiving shared data. It only works in secure contexts (HTTPS) and on supported browsers.
