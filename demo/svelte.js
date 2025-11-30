@@ -1,13 +1,14 @@
+import { mount } from 'svelte';
 import App from './App.svelte';
 
-new App({
+mount(App, {
 	target: document.querySelector('#svelte-example-square')
 });
 
-new App({
+mount(App, {
 	target: document.querySelector('#svelte-example-round')
 });
 
-new App({
+mount(App, {
 	target: document.querySelector('#svelte-example-circle')
 });
