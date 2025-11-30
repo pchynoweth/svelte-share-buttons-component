@@ -1,5 +1,17 @@
-<script>
-  let { href, label = '', fill = true, ariaLabel = '', class: classes = '', children, ...restProps } = $props();
+<script lang="ts">
+  import type { Snippet } from 'svelte';
+  import type { HTMLAnchorAttributes } from 'svelte/elements';
+
+  interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
+    href: string;
+    label?: string;
+    fill?: boolean;
+    ariaLabel?: string;
+    class?: string;
+    children: Snippet;
+  }
+
+  let { href, label = '', fill = true, ariaLabel = '', class: classes = '', children, ...restProps }: Props = $props();
 </script>
 
 <style>

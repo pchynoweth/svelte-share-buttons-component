@@ -2,16 +2,19 @@
   "name": "svelte-share-buttons-component",
   "sideEffects": false,
   "type": "module",
-  "svelte": "src/index.js",
+  "svelte": "src/index.ts",
+  "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "exports": {
     ".": {
-      "svelte": "./src/index.js",
+      "types": "./dist/index.d.ts",
+      "svelte": "./src/index.ts",
       "default": "./dist/index.js"
     },
     "./src": {
-      "default": "./src/index.js"
+      "types": "./dist/index.d.ts",
+      "default": "./src/index.ts"
     }
   },
   "scripts": {
@@ -20,16 +23,21 @@
     "preview": "vite build && vite preview",
     "test": "playwright test",
     "test:ui": "playwright test --ui",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
     "prepublishOnly": "npm run build",
     "prepare": "npm run build"
   },
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
     "rollup": "^4.53.3",
     "rollup-plugin-svelte": "^7.2.3",
     "svelte": "^5.45.2",
+    "svelte-check": "^4.3.4",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3",
     "vite": "^7.2.4"
   },
   "keywords": [

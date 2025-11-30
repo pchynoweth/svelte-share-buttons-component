@@ -1,7 +1,18 @@
-<script>
+<script lang="ts">
   import ShareButton from './ShareButton.svelte';
+  import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-  let { text, url, ariaLabel = 'Share on X', hashtags = '', via = '', related = '', class: classes = '', ...restProps } = $props();
+  interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
+    text: string;
+    url: string;
+    hashtags?: string;
+    via?: string;
+    related?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+
+  let { text, url, ariaLabel = 'Share on X', hashtags = '', via = '', related = '', class: classes = '', ...restProps }: Props = $props();
 
   let href = $derived(encodeURI(`https://x.com/intent/tweet/?text=${text}&hashtags=${hashtags}&via=${via}&related=${related}&url=${url}`));
 </script>

@@ -1,7 +1,16 @@
-<script>
+<script lang="ts">
   import ShareButton from './ShareButton.svelte';
+  import type { HTMLAnchorAttributes } from 'svelte/elements';
 
-  let { description, url, media, ariaLabel = 'Share on Pinterest', class: classes = '', ...restProps } = $props();
+  interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
+    description: string;
+    url: string;
+    media: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+
+  let { description, url, media, ariaLabel = 'Share on Pinterest', class: classes = '', ...restProps }: Props = $props();
   
   let href = $derived(encodeURI(`https://pinterest.com/pin/create/button/?url=${url}&media=${media}&description=${description}`));
 </script>
