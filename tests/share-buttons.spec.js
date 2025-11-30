@@ -150,6 +150,34 @@ test.describe('Share Button Components', () => {
     await expect(link).toHaveAttribute('aria-label', 'Share on Xing');
   });
 
+  test('WebShare button renders correctly', async ({ page }) => {
+    const container = page.locator('[data-testid="webshare"]');
+    const button = container.locator('button.ssbc-button__button');
+    
+    await expect(button).toBeVisible();
+    await expect(button).toHaveAttribute('type', 'button');
+    await expect(button).toHaveAttribute('aria-label', 'Share');
+  });
+
+  test('WebShare button contains SVG icon', async ({ page }) => {
+    const container = page.locator('[data-testid="webshare"]');
+    const svg = container.locator('svg');
+    
+    await expect(svg).toBeVisible();
+  });
+
+  test('WebShare button has proper structure', async ({ page }) => {
+    const container = page.locator('[data-testid="webshare"]');
+    const button = container.locator('button.ssbc-button__button');
+    const buttonDiv = container.locator('.ssbc-button');
+    const iconDiv = container.locator('.ssbc-button__icon');
+    
+    await expect(button).toBeVisible();
+    await expect(buttonDiv).toBeVisible();
+    await expect(iconDiv).toBeVisible();
+    await expect(iconDiv).toHaveAttribute('aria-hidden', 'true');
+  });
+
   test('Button with label displays label text', async ({ page }) => {
     const container = page.locator('[data-testid="facebook-with-label"]');
     const button = container.locator('.ssbc-button');

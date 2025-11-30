@@ -10,6 +10,7 @@ export { default as Telegram } from './Telegram.svelte';
 export { default as Tumblr } from './Tumblr.svelte';
 export { default as X } from './X.svelte';
 export { default as Vk } from './Vk.svelte';
+export { default as WebShare } from './WebShare.svelte';
 export { default as WhatsApp } from './WhatsApp.svelte';
 export { default as Xing } from './Xing.svelte';
 export { default as Line } from './Line.svelte';
