@@ -1,6 +1,8 @@
 # svelte-share-buttons-component
 
 ![new-version](https://github.com/pchynoweth/svelte-share-buttons-component/workflows/new-version/badge.svg)
+![Demo Build Test](https://github.com/pchynoweth/svelte-share-buttons-component/workflows/Demo%20Build%20Test/badge.svg)
+![Playwright Tests](https://github.com/pchynoweth/svelte-share-buttons-component/workflows/Playwright%20Tests/badge.svg)
 [![version](https://img.shields.io/npm/v/svelte-share-buttons-component.svg?style=flat-square)](http://npm.im/svelte-share-buttons-component)
 
 Simple Svelte based share buttons component with no tracking.  Based on HTML share buttons from https://github.com/mxstbr/sharingbuttons.io.
