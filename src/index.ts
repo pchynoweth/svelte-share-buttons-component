@@ -1,4 +1,5 @@
 export { default as Bluesky } from './Bluesky.svelte';
+export { default as Discord } from './Discord.svelte';
 export { default as Email } from './Email.svelte';
 export { default as Facebook } from './Facebook.svelte';
 export { default as HackerNews } from './HackerNews.svelte';

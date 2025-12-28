@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Bluesky, Email, Facebook, HackerNews, Line, LinkedIn, Mastodon, Pinterest, Reddit, Telegram, Tumblr, Viber, Vk, WebShare, WhatsApp, X, Xing } from '../src/index.ts';
+  import { Bluesky, Discord, Email, Facebook, HackerNews, Line, LinkedIn, Mastodon, Pinterest, Reddit, Telegram, Tumblr, Viber, Vk, WebShare, WhatsApp, X, Xing } from '../src/index.ts';
 
   const url: string = 'https://example.com/share-test';
   const title: string = 'Test Share Title';
@@ -9,6 +9,10 @@
 <div id="test-container">
   <div data-testid="bluesky">
     <Bluesky text="{title}" {url} />
+  </div>
+  
+  <div data-testid="discord">
+    <Discord />
   </div>
   
   <div data-testid="email">
