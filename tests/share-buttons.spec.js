@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const ALL_BUTTON_TEST_IDS = [
-  'bluesky', 'email', 'facebook', 'hackernews', 'line', 'linkedin', 'mastodon',
+  'bluesky', 'discord', 'email', 'facebook', 'hackernews', 'line', 'linkedin', 'mastodon',
   'pinterest', 'reddit', 'telegram', 'tumblr', 'viber',
   'vk', 'whatsapp', 'x', 'xing'
 ];
@@ -18,6 +18,15 @@ test.describe('Share Button Components', () => {
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute('href', /bsky\.app\/intent\/compose/);
     await expect(link).toHaveAttribute('aria-label', 'Share on Bluesky');
+  });
+
+  test('Discord button renders with correct href', async ({ page }) => {
+    const container = page.locator('[data-testid="discord"]');
+    const link = container.locator('a.ssbc-button__link');
+    
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', /discord\.com\/channels\/@me/);
+    await expect(link).toHaveAttribute('aria-label', 'Share on Discord');
   });
 
   test('Email button renders with correct href', async ({ page }) => {
