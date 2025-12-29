@@ -49,14 +49,15 @@ All components follow this TypeScript interface pattern:
 
 ```typescript
 interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
-  // Platform-specific required props
+  // Platform-specific required props (e.g., url, quote, text, etc.)
   url: string;
+  title?: string;
   // Platform-specific optional props
   ariaLabel?: string;
   class?: string;
 }
 
-let { url, ariaLabel = 'Share on [Platform]', class: classes = '', ...restProps }: Props = $props();
+let { url, title = '', ariaLabel = 'Share on [Platform]', class: classes = '', ...restProps }: Props = $props();
 ```
 
 **Important Conventions:**
@@ -82,12 +83,13 @@ let { url, ariaLabel = 'Share on [Platform]', class: classes = '', ...restProps 
 Always use `$derived()` for computing share URLs:
 
 ```typescript
-let href = $derived(encodeURI(`https://platform.com/share?url=${url}&text=${text}`));
+let href = $derived(encodeURI(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`));
 ```
 
 **Important:**
-- Use `encodeURI()` to properly encode the entire URL
+- Use `encodeURI()` on the entire URL string (not individual parameters)
 - Include all relevant parameters for the platform's share API
+- Template literals inside encodeURI() work correctly for interpolation
 - For optional parameters, include them even if empty (platforms handle this)
 
 ### Accessibility
@@ -151,13 +153,13 @@ When adding a new social media share button:
      
      interface Props extends Omit<HTMLAnchorAttributes, 'class' | 'href' | 'target' | 'rel' | 'aria-label'> {
        url: string;
-       // Add platform-specific props
+       title?: string; // Add platform-specific props as needed
        ariaLabel?: string;
        class?: string;
      }
      
-     let { url, ariaLabel = 'Share on Platform', class: classes = '', ...restProps }: Props = $props();
-     let href = $derived(encodeURI(`https://platform.com/share?url=${url}`));
+     let { url, title = '', ariaLabel = 'Share on Platform', class: classes = '', ...restProps }: Props = $props();
+     let href = $derived(encodeURI(`https://platform.com/share?url=${url}&title=${title}`));
    </script>
    
    <style>
@@ -172,7 +174,9 @@ When adding a new social media share button:
    </style>
    
    <ShareButton class="ssbc-button--platform {classes}" {...restProps} {ariaLabel} {href}>
-     <!-- SVG icon -->
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+       <path d="..."/>
+     </svg>
    </ShareButton>
    ```
 3. **Export in index.ts**: Add `export { default as Platform } from './Platform.svelte';`
