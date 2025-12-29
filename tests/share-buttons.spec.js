@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const ALL_BUTTON_TEST_IDS = [
   'bluesky', 'discord', 'email', 'facebook', 'hackernews', 'line', 'linkedin', 'mastodon',
-  'pinterest', 'reddit', 'telegram', 'tumblr', 'viber',
+  'pinterest', 'reddit', 'sms', 'telegram', 'tumblr', 'viber',
   'vk', 'whatsapp', 'x', 'xing'
 ];
 
@@ -102,6 +102,15 @@ test.describe('Share Button Components', () => {
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute('href', /reddit\.com\/submit/);
     await expect(link).toHaveAttribute('aria-label', 'Share on Reddit');
+  });
+
+  test('SMS button renders with correct href', async ({ page }) => {
+    const container = page.locator('[data-testid="sms"]');
+    const link = container.locator('a.ssbc-button__link');
+    
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', /^sms:\?&body=/);
+    await expect(link).toHaveAttribute('aria-label', 'Share via SMS');
   });
 
   test('Telegram button renders with correct href', async ({ page }) => {
