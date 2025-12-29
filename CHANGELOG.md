@@ -12,6 +12,8 @@
 * Added web fallback for WhatsApp link
 * Added web share API button
 * Added Mastodon button
+* Added Discord button
+* Updated dependencies
 
 # 3.0.0
 
