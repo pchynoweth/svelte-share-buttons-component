@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const ALL_BUTTON_TEST_IDS = [
   'bluesky', 'discord', 'email', 'facebook', 'hackernews', 'line', 'linkedin', 'mastodon',
-  'pinterest', 'reddit', 'telegram', 'tumblr', 'viber',
+  'pinterest', 'pocket', 'reddit', 'telegram', 'tumblr', 'viber',
   'vk', 'whatsapp', 'x', 'xing'
 ];
 
@@ -93,6 +93,15 @@ test.describe('Share Button Components', () => {
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute('href', /pinterest\.com\/pin\/create\/button/);
     await expect(link).toHaveAttribute('aria-label', 'Share on Pinterest');
+  });
+
+  test('Pocket button renders with correct href', async ({ page }) => {
+    const container = page.locator('[data-testid="pocket"]');
+    const link = container.locator('a.ssbc-button__link');
+    
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', /getpocket\.com\/save/);
+    await expect(link).toHaveAttribute('aria-label', 'Share on Pocket');
   });
 
   test('Reddit button renders with correct href', async ({ page }) => {

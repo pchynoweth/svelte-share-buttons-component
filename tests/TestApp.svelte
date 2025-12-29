@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Bluesky, Discord, Email, Facebook, HackerNews, Line, LinkedIn, Mastodon, Pinterest, Reddit, Telegram, Tumblr, Viber, Vk, WebShare, WhatsApp, X, Xing } from '../src/index.ts';
+  import { Bluesky, Discord, Email, Facebook, HackerNews, Line, LinkedIn, Mastodon, Pinterest, Pocket, Reddit, Telegram, Tumblr, Viber, Vk, WebShare, WhatsApp, X, Xing } from '../src/index.ts';
 
   const url: string = 'https://example.com/share-test';
   const title: string = 'Test Share Title';
@@ -41,6 +41,10 @@
   
   <div data-testid="pinterest">
     <Pinterest {url} media="https://example.com/image.png" description="{title}" />
+  </div>
+  
+  <div data-testid="pocket">
+    <Pocket {title} {url} />
   </div>
   
   <div data-testid="reddit">

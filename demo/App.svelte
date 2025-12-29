@@ -1,6 +1,6 @@
 <script>
 	// Using the local src directory for the demo
-	import { Bluesky, Discord, Email, HackerNews, Mastodon, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WebShare, WhatsApp, Xing, Facebook, X, Line, Viber } from '../src/index.ts';
+	import { Bluesky, Discord, Email, HackerNews, Mastodon, Reddit, LinkedIn, Pinterest, Pocket, Telegram, Tumblr, Vk, WebShare, WhatsApp, Xing, Facebook, X, Line, Viber } from '../src/index.ts';
 
 	const url = 'https://pchynoweth.github.io/svelte-share-buttons-component/';
 	const title = 'Svelte Share Buttons Component';
@@ -16,6 +16,7 @@
 <LinkedIn class="share-button" {url} />
 <Tumblr class="share-button" {title} {url} caption="{title}" />
 <Pinterest class="share-button" {url} media="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/200px-Svelte_Logo.svg.png" description={title} />
+<Pocket class="share-button" {title} {url} />
 <Telegram class="share-button" text={title} {url} />
 <Vk class="share-button" {title} {url} />
 <WebShare class="share-button" {title} text={desc} {url} />
