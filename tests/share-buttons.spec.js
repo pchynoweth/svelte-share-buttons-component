@@ -109,7 +109,7 @@ test.describe('Share Button Components', () => {
     const link = container.locator('a.ssbc-button__link');
     
     await expect(link).toBeVisible();
-    await expect(link).toHaveAttribute('href', /^sms:\?&body=/);
+    await expect(link).toHaveAttribute('href', /^sms:\?body=/);
     await expect(link).toHaveAttribute('aria-label', 'Share via SMS');
   });
 

@@ -10,7 +10,7 @@
 
   let { text, ariaLabel = 'Share via SMS', class: classes = '', ...restProps }: Props = $props();
   
-  let href = $derived(encodeURI(`sms:?&body=${text}`));
+  let href = $derived(encodeURI(`sms:?body=${text}`));
 </script>
 
 <style>
