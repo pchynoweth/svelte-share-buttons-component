@@ -13,7 +13,6 @@ Instructions for building high-quality Svelte 5 component libraries with modern 
 - TypeScript with strict mode for type safety
 - Component-scoped styling with CSS custom properties
 - Rollup for bundling library components
-- Minimal external dependencies for small bundle size
 - Playwright for end-to-end component testing
 
 ## Development Standards

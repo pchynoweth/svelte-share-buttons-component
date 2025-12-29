@@ -10,7 +10,7 @@ This is a Svelte 5 component library that provides simple, privacy-friendly soci
 - TypeScript for type safety
 - Rollup for bundling
 - Playwright for end-to-end testing
-- Minimal dependencies (social share buttons use native browser APIs and URL schemes)
+- Social share buttons use native browser APIs and URL schemes (no tracking SDKs)
 
 ## Architecture
 
@@ -183,7 +183,7 @@ When adding a new social media share button:
 ## Important Notes
 
 - **No tracking**: This library intentionally uses direct share URLs without JavaScript tracking
-- **Minimal dependencies**: Keep the library dependencies minimal for users
+- **Native browser APIs**: Social share buttons use native browser APIs and URL schemes rather than external SDKs
 - **Browser compatibility**: Test share URLs work across different browsers
 - **SVG optimization**: Keep SVG icons minimal and optimized
 - **Type safety**: Always use TypeScript and maintain strict type checking
