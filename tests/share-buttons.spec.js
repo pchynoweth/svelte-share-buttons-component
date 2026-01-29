@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 const ALL_BUTTON_TEST_IDS = [
   'bluesky', 'discord', 'email', 'facebook', 'hackernews', 'line', 'linkedin', 'mastodon',
-  'pinterest', 'reddit', 'sms', 'telegram', 'tumblr', 'viber',
+  'pinterest', 'reddit', 'sms', 'telegram', 'threads', 'tumblr', 'viber',
   'vk', 'whatsapp', 'x', 'xing'
 ];
 
@@ -120,6 +120,15 @@ test.describe('Share Button Components', () => {
     await expect(link).toBeVisible();
     await expect(link).toHaveAttribute('href', /telegram\.me\/share\/url/);
     await expect(link).toHaveAttribute('aria-label', 'Share on Telegram');
+  });
+
+  test('Threads button renders with correct href', async ({ page }) => {
+    const container = page.locator('[data-testid="threads"]');
+    const link = container.locator('a.ssbc-button__link');
+    
+    await expect(link).toBeVisible();
+    await expect(link).toHaveAttribute('href', /threads\.net\/intent\/post/);
+    await expect(link).toHaveAttribute('aria-label', 'Share on Threads');
   });
 
   test('Tumblr button renders with correct href', async ({ page }) => {
