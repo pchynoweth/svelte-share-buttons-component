@@ -28,17 +28,17 @@
     "prepare": "npm run build"
   },
   "devDependencies": {
-    "@playwright/test": "^1.58.0",
+    "@playwright/test": "^1.59.1",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-typescript": "^12.3.0",
-    "@sveltejs/vite-plugin-svelte": "^6.2.4",
-    "rollup": "^4.56.0",
+    "@sveltejs/vite-plugin-svelte": "^7.0.0",
+    "rollup": "^4.60.2",
     "rollup-plugin-svelte": "^7.2.3",
-    "svelte": "^5.48.0",
-    "svelte-check": "^4.3.5",
+    "svelte": "^5.55.5",
+    "svelte-check": "^4.4.7",
     "tslib": "^2.8.1",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10"
   },
   "keywords": [
     "svelte"
