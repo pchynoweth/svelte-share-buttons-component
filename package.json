@@ -34,7 +34,7 @@
     "@sveltejs/vite-plugin-svelte": "^7.1.2",
     "rollup": "^4.60.4",
     "rollup-plugin-svelte": "^7.2.3",
-    "svelte": "^5.55.9",
+    "svelte": "^5.56.0",
     "svelte-check": "^4.4.8",
     "tslib": "^2.8.1",
     "typescript": "^6.0.3",
